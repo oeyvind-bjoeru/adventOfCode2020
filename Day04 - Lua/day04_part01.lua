@@ -24,7 +24,6 @@ local function has_value (arr, val)
             return true
         end
     end
-
     return false
 end
 
