@@ -20,10 +20,8 @@ program day01_part01
             print *, 'Answer: ', expenseReport(i) * expenseReport(j) * (2020 - (expenseReport(i) + expenseReport(j)))
             exit iloop
           end if
-
         end if
       end do jloop
-
   end do iloop
 
 end program day01_part01
