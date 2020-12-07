@@ -32,7 +32,6 @@ passports = split_string(content, '\n\n')
 req_fields = {'byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'}
 valid_passports = 0
 
-names = {'John', 'Joe', 'Steve'}
 for i = 1,#passports do 
   passport = string.gsub(passports[i], '\n', ' ')
   entries = split_string(passport, ' ')
