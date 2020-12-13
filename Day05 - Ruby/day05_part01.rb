@@ -1,13 +1,13 @@
 
-data = File.read("Day05 - Haskell/day05_input.txt").split("\n")
+data = File.read("Day05 - Ruby/day05_input.txt").split("\n")
 
-seatIDs = []
+seat_IDs = []
 
-for boardingPass in data
+for boarding_pass in data
   rows = Array (0..127)
   columns = Array (0..7)
 
-  for fb in boardingPass[0,7].split(//)
+  for fb in boarding_pass[0,7].split(//)
     rows_length = rows.size / 2
     if (fb == "B")
       rows = rows.drop(rows_length)
@@ -16,7 +16,7 @@ for boardingPass in data
     end
   end
   
-  for rl in boardingPass[7,3].split(//)
+  for rl in boarding_pass[7,3].split(//)
     col_length = columns.size / 2
     if (rl == "R")
       columns = columns.drop(col_length)
@@ -25,7 +25,7 @@ for boardingPass in data
     end
   end
   
-  seatIDs << (rows[0] * 8) + columns[0]
+  seat_IDs << (rows[0] * 8) + columns[0]
 end
 
-puts "Answer: ", seatIDs.max
+puts "Answer: ", seat_IDs.max
